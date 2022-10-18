@@ -81,14 +81,31 @@ class SLL {
             return this.head.data;
         }
     }
-}
 
-console.log("___Front Test___")
+
+// console.log("___Front Test___")
+// SLL1 = new SLL();
+// SLL1.addFront(18);
+// SLL1.addFront(5);
+// SLL1.addFront(73);
+// console.log(SLL1.head.next);
+// SLL1.removeFront();
+// console.log(SLL1);
+// console.log(SLL1.front());
+    display() {
+        let runner=this.head;
+        let newList="";
+        
+        while(runner != null) {
+            newList+=runner.data+",";
+            runner=runner.next;
+        }
+        return console.log(newList);
+    }
+}
 SLL1 = new SLL();
-SLL1.addFront(18);
-SLL1.addFront(5);
-SLL1.addFront(73);
-console.log(SLL1.head.next);
-SLL1.removeFront();
-console.log(SLL1);
-console.log(SLL1.front());
+SLL1.addFront(76);
+SLL1.addFront(2);
+SLL1.display();
+SLL1.addFront(11.41);
+SLL1.display();
