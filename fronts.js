@@ -95,9 +95,10 @@ class SLL {
     display() {
         let runner=this.head;
         let newList="";
-        
+        newList+=runner.data;
+        runner=runner.next;
         while(runner != null) {
-            newList+=runner.data+",";
+            newList+=","+runner.data;
             runner=runner.next;
         }
         return console.log(newList);
